@@ -21,5 +21,17 @@ Once you have finished this step, you are now ready to run the tool. To do this,
 ./run.py
 ```
 
-Temporary and exported files will be created in the `./export` directory, which will be automatically created if it
-does not exist.
+The tool will first prompt you for your Tower Coverage username and password. Once you have provided that information,
+the tool will download a list of all multi-maps associated with your account.
+
+You will then be prompted to select a
+multimap to export. Once you have selected a multimap, the tool will download the multimap and extract the coverage
+models to the `./export` directory, which will be automatically created if it does not exist.
+
+If you do not wish to enter your credentials every time you run the tool, you can modify the `run.py` file to set the
+following variables:
+
+```python
+tc_username: str = ''
+tc_password: str = ''
+```
